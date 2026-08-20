@@ -218,7 +218,7 @@ class MainWindow(QMainWindow):
         self._audio_tracks = audio_tracks
         self._subtitle_tracks = subtitle_tracks
 
-        self._pg_audio.load_tracks(audio_tracks)
+        self._pg_audio.load_tracks(audio_tracks, video_path=video_info.path)
         self._goto(PAGE_AUDIO)
 
     def _on_audio_selected(self, audio_track):
